@@ -1,0 +1,58 @@
+import 'package:syncfusion_flutter_charts/charts.dart';
+
+
+  late TooltipBehavior _tooltipBehavior;
+  late SelectionBehavior _selectionBehavior;
+
+  @override
+  void initState() {
+    _tooltipBehavior = TooltipBehavior(enable: true);
+    _selectionBehavior = SelectionBehavior(enable: true);
+    super.initState();
+  }
+class ChartData {
+  ChartData(this.x, this.y, this.y1, this.y2, this.y3);
+  final int x;
+  final double y;
+  final double y1;
+  final double y2;
+  final double y3;
+}
+
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(2010, 10.53, 8, 3, 11),
+      ChartData(2011, 9.5, 8, 3, 11),
+      ChartData(2012, 10, 8, 3, 11),
+      ChartData(2013, 9.4, 8, 3, 11),
+      ChartData(2014, 5.8, 8, 3, 11),
+      ChartData(2015, 4.9, 8, 3, 11),
+      ChartData(2016, 4.5, 8, 3, 11),
+      ChartData(2017, 3.6, 8, 3, 11),
+      ChartData(2018, 1.43, 8, 3, 11),
+    ];
+SfCartesianChart(
+                tooltipBehavior: _tooltipBehavior,
+                series: <ChartSeries>[
+                  SplineAreaSeries<ChartData, int>(
+                      enableTooltip: false,
+                      dataSource: chartData,
+                      xValueMapper: (ChartData data, _) => data.x,
+                      yValueMapper: (ChartData data, _) => data.y3),
+                  SplineAreaSeries<ChartData, int>(
+                      enableTooltip: false,
+                      dataSource: chartData,
+                      xValueMapper: (ChartData data, _) => data.x,
+                      yValueMapper: (ChartData data, _) => data.y1),
+                  SplineAreaSeries<ChartData, int>(
+                      color: Colors.redAccent,
+                      enableTooltip: false,
+                      dataSource: chartData,
+                      xValueMapper: (ChartData data, _) => data.x,
+                      yValueMapper: (ChartData data, _) => data.y2),
+                  SplineSeries<ChartData, int>(
+                      enableTooltip: true,
+                      color: Colors.black,
+                      dataSource: chartData,
+                      xValueMapper: (ChartData data, _) => data.x,
+                      yValueMapper: (ChartData data, _) => data.y)
+                ])

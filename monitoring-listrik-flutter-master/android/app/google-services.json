@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "877563246435",
+    "project_id": "johnlistrik-34d94",
+    "storage_bucket": "johnlistrik-34d94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877563246435:android:5318ebaed500ff4e6d8556",
+        "android_client_info": {
+          "package_name": "com.example.monitoring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877563246435-bhl1rfdo2lnhnd8rh4atf2hl3ihi8jg8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfwcBBR4_m1nrKRgXvjP3j3iwRE8FpBu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877563246435-bhl1rfdo2lnhnd8rh4atf2hl3ihi8jg8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
